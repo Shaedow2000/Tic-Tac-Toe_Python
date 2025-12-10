@@ -1,9 +1,10 @@
+from modules.game_functions.create_table import create_table
 from modules.game_functions.place import place_symbol
 from data.global_vars import players_symbol as symbols
 from modules.game_functions.switch import switch
 from modules.methods.methods import clear
 
-def play( table: str ) -> None:
+def play( table: str, cells: list[ list[ str ] ] ) -> None:
     print( table )
     current_player: int = 0
 
@@ -24,9 +25,10 @@ def play( table: str ) -> None:
                 print( '!> Enter a number that is in the table.' )
                 continue
             else:
-                placement: list = place_symbol( symbols[ current_player ], sqr, table )
+                placement: list = place_symbol( symbols[ current_player ], sqr, cells )
                 if placement[ 0 ]:
-                    table = placement[ 1 ]
+                    cells = placement[ 1 ]
+                    table = create_table( cells )
                     print( table )
                     
                     current_player = switch( current_player )

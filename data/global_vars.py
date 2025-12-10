@@ -1,11 +1,17 @@
 menu: str = '\t1: play | c: clear screen | q: quit'
 
-table: str = """
- 1 | 2 | 3
+cells: list[ list[ str ] ] = [
+    [ '1', '2', '3' ],
+    [ '4', '5', '6' ],
+    [ '7', '8', '9' ]
+]
+
+table: str = f"""
+ { cells[ 0 ][ 0 ] } | { cells[ 0 ][ 1 ] } | { cells[ 0 ][ 2 ] }
 -----------
- 4 | 5 | 6
+ { cells[ 1 ][ 0 ] } | { cells[ 1 ][ 1 ] } | { cells[ 1 ][ 2 ] }
 -----------
- 7 | 8 | 9
+ { cells[ 2 ][ 0 ] } | { cells[ 2 ][ 1 ] } | { cells[ 2 ][ 2 ] }
 """
 
 players_symbol: list[ str ] = [ 'X', 'O' ]
