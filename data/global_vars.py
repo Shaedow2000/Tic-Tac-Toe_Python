@@ -1,4 +1,4 @@
-menu: str = '1: play | c: clear screen | q: quit'
+menu: str = '\t1: play | c: clear screen | q: quit'
 
 table: str = """
  1 | 2 | 3

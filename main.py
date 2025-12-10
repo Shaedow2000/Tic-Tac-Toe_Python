@@ -1,10 +1,34 @@
 #!/usr/bin/env python3
 
 import sys
+import os
+
+from data.global_vars import *
+from modules.methods import clear 
+
 
 def main() -> None:
-    pass 
+    clear()
+    print( menu )
 
+    while True:
+        choice: str = input( '==> ' ).replace( ' ', '' ).lower()
+
+
+        if choice == 'q':
+            print( '--> Exiting...' )
+            break
+        elif choice == 'c':
+            clear()
+            print( menu )
+            continue
+        elif choice == '1':
+            continue
+        elif choice == '':
+            continue
+        else:
+            print( f'!> Unknown command: { choice }' )
+            continue
 
 if __name__ == '__main__':
     try:
