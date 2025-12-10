@@ -4,6 +4,7 @@ import sys
 import os
 
 from data.global_vars import *
+from modules.game_functions.play import start
 from modules.methods import clear 
 
 
@@ -23,7 +24,8 @@ def main() -> None:
             print( menu )
             continue
         elif choice == '1':
-            continue
+            clear()
+            start( table ) 
         elif choice == '':
             continue
         else:
