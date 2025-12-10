@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import sys
-import os
 
 from data.global_vars import *
 from modules.game_functions.play import start
