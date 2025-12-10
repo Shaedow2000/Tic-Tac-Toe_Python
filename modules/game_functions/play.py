@@ -3,7 +3,7 @@ from data.global_vars import players_symbol as symbols
 from modules.game_functions.switch import switch
 from modules.methods.methods import clear
 
-def start( table: str ) -> None:
+def play( table: str ) -> None:
     print( table )
     current_player: int = 0
 

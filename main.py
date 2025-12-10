@@ -3,7 +3,7 @@
 import sys
 
 from data.global_vars import *
-from modules.game_functions.play import start
+from modules.game_functions.play import play
 from modules.methods import clear 
 
 
@@ -24,7 +24,7 @@ def main() -> None:
             continue
         elif choice == '1':
             clear()
-            start( table ) 
+            play( table ) 
         elif choice == '':
             continue
         else:
