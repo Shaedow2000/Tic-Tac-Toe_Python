@@ -1,3 +1,4 @@
+from modules.game_functions.check_win import check_win
 from modules.game_functions.create_table import create_table
 from modules.game_functions.place import place_symbol
 from data.global_vars import players_symbol as symbols
@@ -30,8 +31,13 @@ def play( table: str, cells: list[ list[ str ] ] ) -> None:
                     cells = placement[ 1 ]
                     table = create_table( cells )
                     print( table )
-                    
-                    current_player = switch( current_player )
+
+                    if check_win( cells ):
+                        print( f'--> { symbols[ current_player ] } Won !!!' )
+                        break
+                    else:
+                        current_player = switch( current_player )
+                        continue
                 else:
                     print( '!> Enter an empty cell.' )
                     continue
