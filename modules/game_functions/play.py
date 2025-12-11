@@ -4,10 +4,13 @@ from modules.game_functions.place import place_symbol
 from data.global_vars import players_symbol as symbols
 from modules.game_functions.switch import switch
 from modules.methods.methods import clear
+from modules.game_functions.clear_board import clear_board
 
 def play( table: str, cells: list[ list[ str ] ] ) -> None:
     print( table )
     current_player: int = 0
+
+    cells = clear_board()
 
     while True:
         sqr: str | int = input( '=> Enter number of the square: ' ).replace( ' ', '' )

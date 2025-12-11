@@ -24,7 +24,7 @@ def main() -> None:
             continue
         elif choice == '1':
             clear()
-            play( table, cells ) 
+            play( table, cells )
         elif choice == '':
             continue
         else:
